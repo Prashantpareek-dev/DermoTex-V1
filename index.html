@@ -1,0 +1,4217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dermotex Care- Natural Treatment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Hind:wght@300;400;500;600;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Khula:wght@300;400;600;700;800&family=Yantramanav:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Color Themes - Dermotex Product Inspired */
+        :root {
+            /* Dermotex Maroon/Burgundy Theme */
+            --brand-primary: #7B2D3C;
+            --brand-secondary: #A0344A;
+            --brand-light: #F5E6E8;
+            --brand-muted: #D4A5B0;
+            --brand-accent: #4A1B23;
+            --support-bg: #FDF7F0;
+            --text-dark: #3D0E15;
+            --muted: #B8677A;
+            --success-color: #2D7A32;
+            --warning-color: #D4A017;
+            --danger-color: #C62D42;
+        }
+
+        /* Global Khula Font Family */
+        * {
+            font-family: 'Khula', sans-serif !important;
+        }
+
+        body {
+            font-family: 'Khula', sans-serif !important;
+        }
+
+        /* Global Khula Font Family */
+        * {
+            font-family: 'Khula', sans-serif !important;
+        }
+
+        body {
+            font-family: 'Khula', sans-serif !important;
+        }
+
+
+
+        .bg-brand-primary {
+            background-color: var(--brand-primary);
+        }
+
+        .bg-brand-light {
+            background-color: var(--brand-light);
+        }
+
+        .bg-brand-muted {
+            background-color: var(--brand-muted);
+        }
+
+        .bg-brand-accent {
+            background-color: var(--brand-accent);
+        }
+
+        .text-brand-primary {
+            color: var(--brand-primary);
+        }
+
+        .text-brand-secondary {
+            color: var(--brand-secondary);
+        }
+
+        .text-brand-light {
+            color: var(--brand-light);
+        }
+
+        .text-brand-muted {
+            color: var(--brand-muted);
+        }
+
+        .text-brand-accent {
+            color: var(--brand-accent);
+        }
+
+        .border-brand-primary {
+            border-color: var(--brand-primary);
+        }
+
+        .border-brand-secondary {
+            border-color: var(--brand-secondary);
+        }
+
+        .border-brand-light {
+            border-color: var(--brand-light);
+        }
+
+        .border-brand-muted {
+            border-color: var(--brand-muted);
+        }
+
+        .border-brand-accent {
+            border-color: var(--brand-accent);
+        }
+
+        .font-arya {
+            font-family: 'Arya', sans-serif !important;
+        }
+
+        .font-inknut {
+            font-family: 'Inknut Antiqua', serif !important;
+        }
+
+        .font-yantra {
+            font-family: 'Yantramanav', sans-serif !important;
+        }
+
+        .font-hind {
+            font-family: 'Hind', sans-serif !important;
+        }
+
+        .font-khula {
+            font-family: 'Khula', sans-serif !important;
+        }
+
+
+
+
+        /* Container width control */
+        .main-container {
+            max-width: 450px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            width: 100%;
+            position: relative;
+        }
+
+
+
+        /* Mobile responsive */
+        @media (max-width: 450px) {
+            .main-container {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .theme-switcher {
+                top: 5px;
+                right: 5px;
+                padding: 6px;
+            }
+
+            .theme-btn {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        /* Creative Logo Styles */
+        .creative-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+            border-radius: 50%;
+            overflow: visible;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Only apply hover effects on devices that support hover */
+        @media (hover: hover) and (pointer: fine) {
+            .creative-logo:hover {
+                transform: scale(1.1) rotate(12deg);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .creative-logo:hover .glow-ring {
+                animation-duration: 1s;
+            }
+
+            .creative-logo:hover .healing-glow::after {
+                content: '';
+                position: absolute;
+                left: -25px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 2px;
+                background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6));
+                animation: healingTrail 1s ease-out infinite;
+            }
+        }
+
+        .creative-logo:active {
+            transform: scale(1.05);
+        }
+
+        .creative-logo:focus {
+            outline: none;
+        }
+
+        .healing-symbol {
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .healing-glow {
+            position: absolute;
+            right: -35px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .glow-ring {
+            position: absolute;
+            border: 2px solid var(--brand-primary);
+            border-radius: 50%;
+            opacity: 0;
+            animation: healingPulse 2s ease-out infinite;
+        }
+
+        .glow-ring:nth-child(1) {
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .glow-ring:nth-child(2) {
+            width: 30px;
+            height: 30px;
+            animation-delay: 0.5s;
+        }
+
+        .glow-ring:nth-child(3) {
+            width: 40px;
+            height: 40px;
+            animation-delay: 1s;
+        }
+
+        @keyframes healingPulse {
+            0% {
+                transform: scale(0.3);
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Enhanced healing glow effect on hover - moved to media query above */
+
+        @keyframes healingTrail {
+            0% {
+                width: 0px;
+                opacity: 0;
+            }
+
+            50% {
+                width: 15px;
+                opacity: 0.8;
+            }
+
+            100% {
+                width: 25px;
+                opacity: 0;
+            }
+        }
+
+
+
+        /* Enhanced Divider Animations */
+        @keyframes healingFlow {
+            0% {
+                transform: translateX(-100%) scale(0.8);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: translateX(-10px) scale(1);
+            }
+
+            100% {
+                transform: translateX(100%) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 5px var(--brand-primary), 0 0 10px var(--brand-primary), 0 0 15px var(--brand-primary);
+                opacity: 0.6;
+            }
+
+            50% {
+                box-shadow: 0 0 10px var(--brand-primary), 0 0 20px var(--brand-primary), 0 0 30px var(--brand-primary);
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatSymbol {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            25% {
+                transform: translateY(-3px) rotate(5deg);
+            }
+
+            50% {
+                transform: translateY(-6px) rotate(0deg);
+            }
+
+            75% {
+                transform: translateY(-3px) rotate(-5deg);
+            }
+        }
+
+        @keyframes rippleEffect {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .healing-divider {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+        }
+
+        .divider-symbol {
+            position: relative;
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: floatSymbol 3s ease-in-out infinite, pulseGlow 2s ease-in-out infinite;
+            z-index: 2;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .divider-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    var(--brand-muted) 20%,
+                    var(--brand-primary) 50%,
+                    var(--brand-muted) 80%,
+                    transparent 100%);
+            border-radius: 1px;
+            overflow: hidden;
+        }
+
+        .divider-flow {
+            position: absolute;
+            height: 100%;
+            width: 30px;
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.8) 50%,
+                    transparent 100%);
+            animation: healingFlow 3s ease-in-out infinite;
+        }
+
+        .divider-ripple {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 2px solid var(--brand-primary);
+            border-radius: 50%;
+            opacity: 0;
+            animation: rippleEffect 2s ease-out infinite;
+        }
+
+        .divider-ripple:nth-child(2) {
+            animation-delay: 0.7s;
+        }
+
+        .divider-ripple:nth-child(3) {
+            animation-delay: 1.4s;
+        }
+
+        /* Enhanced Review Cards & Success Stories Styles */
+        .review-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(123, 45, 60, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .review-card:hover::before {
+            left: 100%;
+        }
+
+        .customer-avatar {
+            clip-path: circle(50%);
+            transition: all 0.3s ease;
+        }
+
+        .customer-avatar:hover {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            transform: rotate(360deg);
+        }
+
+        .success-story-card {
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Deep Problem Section Styles */
+        .deep-problem-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .deep-bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: deepFloat 20s infinite linear;
+        }
+
+        .deep-circle-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #6A00F4, #8B5CF6);
+            top: -100px;
+            left: -50px;
+        }
+
+        .deep-circle-2 {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #2D0A4B, #6A00F4);
+            top: 200px;
+            right: -75px;
+            animation-delay: -10s;
+        }
+
+        .deep-circle-3 {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(225deg, #8B5CF6, #E5C5A0);
+            bottom: -60px;
+            left: 30%;
+            animation-delay: -5s;
+        }
+
+        @keyframes deepFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(90deg); }
+            50% { transform: translateY(0px) rotate(180deg); }
+            75% { transform: translateY(20px) rotate(270deg); }
+        }
+
+        .deep-title {
+            background: linear-gradient(45deg, #2D0A4B, #6A00F4, #8B5CF6);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: deepTitleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes deepTitleGlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .deep-quote {
+            position: relative;
+            background: linear-gradient(135deg, rgba(109, 0, 244, 0.05), rgba(139, 92, 246, 0.05));
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(109, 0, 244, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            animation: quoteFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes quoteFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .deep-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(109, 0, 244, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateZ(0);
+        }
+
+        .deep-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(109, 0, 244, 0.1),
+                transparent
+            );
+            transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .deep-card:hover::before {
+            left: 100%;
+        }
+
+        .deep-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(109, 0, 244, 0.15),
+                0 0 30px rgba(139, 92, 246, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            border-color: rgba(109, 0, 244, 0.3);
+        }
+
+        .deep-card:active {
+            transform: translateY(-4px) scale(1.01);
+        }
+
+        .deep-card-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 12px;
+            padding: 8px;
+            background: linear-gradient(135deg, #6A00F4, #8B5CF6);
+            box-shadow: 0 8px 20px rgba(109, 0, 244, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .deep-card:hover .deep-card-icon {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 12px 30px rgba(109, 0, 244, 0.4);
+        }
+
+        .deep-card-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #2D0A4B;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .deep-card:hover .deep-card-text {
+            color: #1a0629;
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(109, 0, 244, 0.4) 0%, transparent 70%);
+            transform: scale(0);
+            animation: rippleEffect 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .deep-card-border {
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 1px;
+            background: linear-gradient(45deg, #6A00F4, transparent, #8B5CF6);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .deep-card:hover .deep-card-border {
+            opacity: 1;
+        }
+
+        /* Mobile Optimizations for Deep Cards */
+        @media (max-width: 640px) {
+            .deep-card-icon {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            .deep-card-text {
+                font-size: 1rem;
+            }
+            
+            .deep-card:hover {
+                transform: translateY(-4px) scale(1.01);
+            }
+        }
+
+        .success-story-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(123, 45, 60, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .success-story-card:hover::after {
+            opacity: 1;
+        }
+
+        .success-avatar {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .success-avatar:hover {
+            clip-path: circle(50%);
+            transform: scale(1.1);
+        }
+
+        .success-avatar::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--brand-primary), var(--brand-secondary), var(--brand-primary));
+            clip-path: inherit;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .success-avatar:hover::before {
+            opacity: 1;
+        }
+
+        /* Additional hover effects */
+        .review-card:hover {
+            border-color: var(--brand-primary);
+            background: linear-gradient(135deg, var(--brand-light), rgba(255, 255, 255, 0.9));
+        }
+
+        .success-story-card:hover {
+            border-color: var(--brand-secondary);
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        /* Clip path utility */
+        .clip-path-hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        /* Enhanced animations */
+        @keyframes cardPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 12px rgba(123, 45, 60, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 8px 25px rgba(123, 45, 60, 0.4);
+            }
+        }
+
+        .review-card:hover,
+        .success-story-card:hover {
+            animation: cardPulse 2s ease-in-out infinite;
+        }
+
+        /* Enhanced FAQ Section Styles */
+        .faq-enhanced-section {
+            background: linear-gradient(135deg, #fdfbfb 0%, #f7f4f4 50%, #f5f0f0 100%);
+        }
+
+        /* FAQ Categories */
+        .faq-category {
+            padding: 8px 16px;
+            border: 2px solid var(--brand-muted);
+            border-radius: 25px;
+            background: white;
+            color: var(--brand-accent);
+            font-family: 'Khula', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .faq-category:hover {
+            transform: translateY(-2px);
+            border-color: var(--brand-primary);
+            box-shadow: 0 6px 20px rgba(123, 45, 60, 0.15);
+        }
+
+        .faq-category.active {
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            color: white;
+            border-color: var(--brand-primary);
+            box-shadow: 0 6px 20px rgba(123, 45, 60, 0.25);
+        }
+
+        /* Enhanced FAQ Items */
+        .faq-enhanced-item {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(123, 45, 60, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(123, 45, 60, 0.1);
+        }
+
+        .faq-enhanced-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(123, 45, 60, 0.15);
+            border-color: var(--brand-primary);
+        }
+
+        .faq-enhanced-question {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            padding: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .faq-enhanced-question:hover {
+            background: linear-gradient(135deg, rgba(123, 45, 60, 0.03), rgba(160, 52, 74, 0.02));
+        }
+
+        .faq-enhanced-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            box-shadow: 0 6px 20px rgba(123, 45, 60, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .faq-enhanced-item.active .faq-enhanced-icon {
+            transform: scale(1.1) rotate(360deg);
+        }
+
+        .faq-enhanced-content {
+            flex: 1;
+        }
+
+        .faq-enhanced-title {
+            font-family: 'Khula', sans-serif !important;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--brand-primary);
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .faq-enhanced-subtitle {
+            font-family: 'Khula', sans-serif !important;
+            font-size: 14px;
+            color: var(--brand-muted);
+            opacity: 0.8;
+        }
+
+        .faq-enhanced-caret {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--brand-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-primary);
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-enhanced-item.active .faq-enhanced-caret {
+            transform: rotate(180deg);
+            background: var(--brand-primary);
+            color: white;
+        }
+
+        .faq-enhanced-answer {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .faq-enhanced-item.active .faq-enhanced-answer {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        .faq-enhanced-answer-content {
+            padding: 0 20px 24px;
+            font-family: 'Hind', sans-serif;
+            color: var(--brand-accent);
+        }
+
+        /* Timeline Styles */
+        .timeline-container {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--brand-primary), var(--brand-secondary));
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            left: -36px;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--brand-primary);
+        }
+
+        .timeline-content h4 {
+            margin-bottom: 4px;
+        }
+
+        /* Combo Cards */
+        .combo-card {
+            transition: all 0.3s ease;
+        }
+
+        .combo-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Skin Types Grid */
+        .skin-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .skin-type-card {
+            text-align: center;
+            padding: 16px;
+            background: white;
+            border-radius: 16px;
+            border: 2px solid var(--brand-light);
+            transition: all 0.3s ease;
+        }
+
+        .skin-type-card:hover {
+            border-color: var(--brand-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(123, 45, 60, 0.1);
+        }
+
+        .skin-icon {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .skin-type-card h4 {
+            font-weight: bold;
+            color: var(--brand-primary);
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .skin-type-card p {
+            font-size: 12px;
+            color: var(--brand-muted);
+        }
+
+        /* Usage Steps */
+        .usage-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background: linear-gradient(135deg, #f8f9ff, #f0f2ff);
+            border-radius: 16px;
+            border-left: 4px solid var(--brand-primary);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(123, 45, 60, 0.3);
+        }
+
+        .step-content h4 {
+            font-weight: bold;
+            color: var(--brand-primary);
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            color: var(--brand-accent);
+            font-size: 14px;
+        }
+
+        /* Ingredients Section Styles */
+        .ingredients-section {
+            position: relative;
+            background: linear-gradient(135deg, #fefefe 0%, #f8fffe 50%, #f0fdf4 100%);
+        }
+
+        .ingredients-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ingredient-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(123, 45, 60, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(123, 45, 60, 0.1);
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(123, 45, 60, 0.15);
+            border-color: var(--brand-primary);
+        }
+
+        .ingredient-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px;
+        }
+
+        .ingredient-content.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .ingredient-image-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, var(--brand-light), #fff);
+        }
+
+        .ingredient-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .ingredient-overlay {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(123, 45, 60, 0.3);
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+
+        .ingredient-card:hover .ingredient-overlay {
+            transform: scale(1);
+        }
+
+        .ingredient-emoji {
+            font-size: 18px;
+        }
+
+        .ingredient-info {
+            flex: 1;
+        }
+
+        .ingredient-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--brand-primary);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .ingredient-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .benefit-badge {
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .ingredient-description {
+            color: var(--brand-accent);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Additional Herbs Banner */
+        .additional-herbs-banner {
+            background: linear-gradient(135deg, var(--brand-light), rgba(255, 255, 255, 0.9));
+            border-radius: 16px;
+            padding: 20px;
+            border: 2px dashed var(--brand-muted);
+            margin-top: 20px;
+        }
+
+        .herbs-banner-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-align: left;
+        }
+
+        .herbs-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3);
+        }
+
+        .herbs-text h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--brand-primary);
+            margin-bottom: 6px;
+        }
+
+        .herbs-text p {
+            color: var(--brand-accent);
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Safety Section */
+        .safety-section {
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+            }
+        }
+
+        /* Comparison Section Styles */
+        .comparison-section {
+            position: relative;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 50%, #e5e7eb 100%);
+        }
+
+        .comparison-container {
+            position: relative;
+        }
+
+        .comparison-grid {
+            position: relative;
+        }
+
+        .comparison-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px 24px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.3), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .regular-creams::before {
+            background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.6), transparent);
+        }
+
+        .dermotex-combo::before {
+            background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.6), transparent);
+        }
+
+        .comparison-card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .regular-creams {
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+
+        .dermotex-combo {
+            border-color: rgba(34, 197, 94, 0.2);
+            transform: scale(1.02);
+            box-shadow: 0 20px 60px rgba(123, 45, 60, 0.15);
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .dermotex-combo:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .comparison-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .comparison-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-icon.regular {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            border: 3px solid #ef4444;
+        }
+
+        .comparison-icon.dermotex {
+            background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+            border: 3px solid #22c55e;
+        }
+
+        .comparison-image {
+            width: 48px;
+            height: 48px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .comparison-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .regular-title {
+            color: #dc2626;
+        }
+
+        .dermotex-title {
+            color: var(--brand-primary);
+        }
+
+        .comparison-subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .regular-subtitle {
+            color: #991b1b;
+        }
+
+        .dermotex-subtitle {
+            color: var(--brand-accent);
+        }
+
+        .comparison-features {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item.negative {
+            background: linear-gradient(135deg, #fef2f2, #fee2e2);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .feature-item.positive {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .feature-item:hover {
+            transform: translateX(8px);
+        }
+
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .negative-icon {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+
+        .positive-icon {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+        }
+
+        .feature-text strong {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .feature-item.negative .feature-text strong {
+            color: #dc2626;
+        }
+
+        .feature-item.positive .feature-text strong {
+            color: var(--brand-primary);
+        }
+
+        .feature-text p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* VS Divider */
+        .vs-divider {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            display: none;
+        }
+
+        .vs-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(123, 45, 60, 0.3);
+            border: 4px solid white;
+            animation: pulse 2s infinite;
+        }
+
+        .vs-text {
+            color: white;
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        /* Winner Badge */
+        .winner-badge {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #92400e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+            transform: rotate(15deg);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: rotate(15deg) translateY(0);
+            }
+
+            50% {
+                transform: rotate(15deg) translateY(-5px);
+            }
+        }
+
+        /* Comparison CTA */
+        .comparison-cta .cta-highlight {
+            box-shadow: 0 20px 60px rgba(123, 45, 60, 0.3);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 20px 60px rgba(123, 45, 60, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 25px 80px rgba(123, 45, 60, 0.5);
+            }
+        }
+
+        /* Desktop specific styles */
+        @media (min-width: 768px) {
+            .vs-divider {
+                display: block;
+            }
+
+            .comparison-grid {
+                gap: 80px;
+            }
+        }
+
+        /* Mobile Responsiveness for Comparison */
+        @media (max-width: 450px) {
+            .comparison-card {
+                padding: 24px 16px;
+            }
+
+            .comparison-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .comparison-image {
+                width: 36px;
+                height: 36px;
+            }
+
+            .comparison-title {
+                font-size: 20px;
+            }
+
+            .comparison-subtitle {
+                font-size: 12px;
+            }
+
+            .feature-item {
+                padding: 12px;
+                gap: 12px;
+            }
+
+            .feature-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+
+            .feature-text strong {
+                font-size: 14px;
+            }
+
+            .feature-text p {
+                font-size: 12px;
+            }
+
+            .winner-badge {
+                top: -8px;
+                right: -8px;
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+
+            .cta-highlight {
+                padding: 20px 16px !important;
+            }
+
+            .cta-highlight h4 {
+                font-size: 18px !important;
+            }
+        }
+
+        /* Mobile Responsiveness for Ingredients */
+        @media (max-width: 450px) {
+            .ingredient-content {
+                flex-direction: column !important;
+                text-align: center;
+                padding: 20px;
+                gap: 16px;
+            }
+
+            .ingredient-content.reverse {
+                flex-direction: column !important;
+            }
+
+            .ingredient-image-container {
+                width: 100px;
+                height: 100px;
+            }
+
+            .ingredient-title {
+                font-size: 20px;
+            }
+
+            .ingredient-description {
+                font-size: 14px;
+            }
+
+            .benefit-badge {
+                font-size: 11px;
+                padding: 3px 10px;
+            }
+
+            .herbs-banner-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .herbs-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .herbs-text h4 {
+                font-size: 18px;
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 450px) {
+            .faq-enhanced-title {
+                font-size: 16px;
+            }
+
+            .faq-enhanced-subtitle {
+                font-size: 12px;
+            }
+
+            .faq-enhanced-question {
+                padding: 16px;
+                gap: 12px;
+            }
+
+            .faq-enhanced-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .faq-enhanced-answer-content {
+                padding: 0 16px 20px;
+            }
+
+            .timeline-container {
+                padding-left: 25px;
+            }
+
+            .timeline-dot {
+                left: -31px;
+            }
+
+            .skin-types-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .step-item {
+                padding: 12px;
+                gap: 12px;
+            }
+
+            .step-number {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+        }
+
+        /* Enhanced Benefits Section Styles */
+        .benefits-icon-container {
+            position: relative;
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .benefits-icon {
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 4px 8px rgba(106, 0, 244, 0.3));
+        }
+
+        .benefits-title {
+            background: linear-gradient(135deg, #2D0A4B, #6A00F4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from {
+                filter: drop-shadow(0 0 5px rgba(106, 0, 244, 0.3));
+            }
+
+            to {
+                filter: drop-shadow(0 0 15px rgba(106, 0, 244, 0.6));
+            }
+        }
+
+        /* Enhanced Benefit Cards */
+        .benefit-card {
+            position: relative;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(106, 0, 244, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 1.5rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px) rotateX(5deg);
+            box-shadow:
+                0 20px 40px rgba(106, 0, 244, 0.2),
+                0 8px 25px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border-color: rgba(106, 0, 244, 0.5);
+        }
+
+        .benefit-card:active {
+            transform: translateY(-4px) rotateX(2deg);
+            transition: transform 0.1s ease;
+        }
+
+        /* Ripple Effect */
+        .card-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(106, 0, 244, 0.4);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .card-ripple.animate {
+            animation: rippleAnimation 0.6s ease-out;
+        }
+
+        @keyframes rippleAnimation {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+
+        /* Card Content Enhancements */
+        .benefit-card .relative {
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Icon Container Enhancements */
+        .benefit-card div[class*="w-24 h-24"] {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-card:hover div[class*="w-24 h-24"] {
+            transform: rotate(12deg) scale(1.1);
+            box-shadow: 0 8px 25px rgba(106, 0, 244, 0.2);
+        }
+
+        .benefit-card div[class*="w-28 h-28"] {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-card:hover div[class*="w-28 h-28"] {
+            transform: rotate(12deg) scale(1.1);
+            box-shadow: 0 10px 30px rgba(106, 0, 244, 0.2);
+        }
+
+        /* Text Animation */
+        .benefit-card p {
+            transition: all 0.3s ease;
+            transform: translateZ(0);
+        }
+
+        .benefit-card:hover p {
+            transform: translateY(-2px) translateZ(10px);
+            text-shadow: 0 2px 8px rgba(106, 0, 244, 0.2);
+        }
+
+        /* Gradient Overlay Animation */
+        .benefit-card::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #6A00F4, #8B5CF6, #A855F7, #C084FC);
+            border-radius: 1.6rem;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 0.3s ease;
+            animation: borderGradient 3s linear infinite;
+        }
+
+        .benefit-card:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes borderGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Click Animation */
+        .benefit-card.clicked {
+            animation: cardClick 0.3s ease;
+        }
+
+        @keyframes cardClick {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.95);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Floating Animation for Cards */
+        .benefit-card:nth-child(odd) {
+            animation: floatOdd 6s ease-in-out infinite;
+        }
+
+        .benefit-card:nth-child(even) {
+            animation: floatEven 6s ease-in-out infinite 3s;
+        }
+
+        @keyframes floatOdd {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes floatEven {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        /* Hover state override for floating animation */
+        .benefit-card:hover {
+            animation: none;
+        }
+
+        /* Mobile Responsiveness for Benefits */
+        @media (max-width: 450px) {
+            .benefit-card {
+                padding: 1rem !important;
+                border-radius: 1.25rem;
+            }
+
+            .benefit-card div[class*="w-24 h-24"] {
+                width: 4rem !important;
+                height: 4rem !important;
+            }
+
+            .benefit-card div[class*="w-28 h-28"] {
+                width: 5rem !important;
+                height: 5rem !important;
+            }
+
+            .benefit-card img[class*="w-14 h-14"] {
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+            }
+
+            .benefit-card img[class*="w-16 h-16"] {
+                width: 3rem !important;
+                height: 3rem !important;
+            }
+
+            .benefit-card p {
+                font-size: 0.75rem !important;
+                line-height: 1.2;
+            }
+
+            .benefit-card:hover {
+                transform: translateY(-4px) scale(1.02);
+            }
+        }
+
+        /* Enhanced Trust & Guarantee Section Styles */
+        .trust-bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(106, 0, 244, 0.1), rgba(139, 92, 246, 0.05));
+            animation: trustFloat 8s ease-in-out infinite;
+        }
+
+        .trust-circle-1 {
+            width: 120px;
+            height: 120px;
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .trust-circle-2 {
+            width: 80px;
+            height: 80px;
+            top: 60%;
+            right: -5%;
+            animation-delay: 2s;
+        }
+
+        .trust-circle-3 {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 10%;
+            animation-delay: 4s;
+        }
+
+        @keyframes trustFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.1);
+            }
+        }
+
+        .trust-icon-container {
+            animation: trustIconFloat 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes trustIconFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-8px) rotate(5deg);
+            }
+        }
+
+        .trust-shield-icon {
+            filter: drop-shadow(0 4px 12px rgba(106, 0, 244, 0.4));
+            animation: shieldPulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes shieldPulse {
+            from {
+                filter: drop-shadow(0 4px 12px rgba(106, 0, 244, 0.4));
+            }
+
+            to {
+                filter: drop-shadow(0 6px 20px rgba(106, 0, 244, 0.7));
+            }
+        }
+
+        .trust-glow-ring {
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, rgba(106, 0, 244, 0.3), transparent);
+            animation: rotateGlow 3s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rotateGlow {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .trust-title {
+            background: linear-gradient(135deg, #2D0A4B, #6A00F4, #8B5CF6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titleShimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes titleShimmer {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 5px rgba(106, 0, 244, 0.3));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.6));
+            }
+        }
+
+        .trust-subtitle {
+            animation: subtitleGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes subtitleGlow {
+            from {
+                text-shadow: 0 0 5px rgba(59, 31, 94, 0.3);
+            }
+
+            to {
+                text-shadow: 0 0 15px rgba(59, 31, 94, 0.6);
+            }
+        }
+
+        .trust-card {
+            position: relative;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+        }
+
+        .trust-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 1.5rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .trust-card:hover::before {
+            opacity: 1;
+        }
+
+        .trust-card:hover {
+            transform: translateY(-12px) rotateX(8deg);
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.15),
+                0 12px 30px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .trust-card:active {
+            transform: translateY(-6px) rotateX(4deg) scale(0.98);
+            transition: transform 0.1s ease;
+        }
+
+        /* Trust Card Ripple Effect */
+        .trust-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(106, 0, 244, 0.3);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .trust-ripple.animate {
+            animation: trustRippleAnimation 0.6s ease-out;
+        }
+
+        @keyframes trustRippleAnimation {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                width: 300px;
+                height: 300px;
+                opacity: 0;
+            }
+        }
+
+        .trust-check-mark {
+            font-size: 24px;
+            text-shadow: 0 2px 8px rgba(34, 197, 94, 0.5);
+        }
+
+        .trust-guarantee-card {
+            position: relative;
+            animation: guaranteePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes guaranteePulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        .trust-guarantee-card:hover .guarantee-glow {
+            opacity: 1;
+            animation: guaranteeGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes guaranteeGlow {
+            from {
+                opacity: 1;
+                filter: brightness(1);
+            }
+
+            to {
+                opacity: 1;
+                filter: brightness(1.2);
+            }
+        }
+
+        /* Animation Delay Utility */
+        .animation-delay-300 {
+            animation-delay: 300ms;
+        }
+
+        /* Floating animations for trust cards */
+        .trust-card:nth-child(odd) {
+            animation: trustCardFloatOdd 6s ease-in-out infinite;
+        }
+
+        .trust-card:nth-child(even) {
+            animation: trustCardFloatEven 6s ease-in-out infinite 2s;
+        }
+
+        @keyframes trustCardFloatOdd {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+
+        @keyframes trustCardFloatEven {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        /* Hover state override for floating animation */
+        .trust-card:hover {
+            animation: none;
+        }
+
+        /* Click Animation */
+        .trust-card.clicked {
+            animation: trustCardClick 0.3s ease;
+        }
+
+        @keyframes trustCardClick {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.95);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Mobile Responsiveness for Trust Section */
+        @media (max-width: 450px) {
+            .trust-card {
+                padding: 1.5rem !important;
+                border-radius: 1.5rem;
+            }
+
+            .trust-card .w-16 {
+                width: 9rem !important;
+                height: 9rem !important;
+            }
+
+            .trust-card img {
+                width: 6rem !important;
+                height: 6rem !important;
+            }
+
+            .trust-card p {
+                font-size: 1rem !important;
+            }
+
+            .trust-card .text-lg {
+                font-size: 1.25rem !important;
+            }
+
+            .trust-card .text-sm {
+                font-size: 1rem !important;
+            }
+
+            .trust-title {
+                font-size: 1.75rem !important;
+            }
+
+            .trust-subtitle {
+                font-size: 1rem !important;
+            }
+
+            .trust-card:hover {
+                transform: translateY(-6px) scale(1.02);
+            }
+
+            .trust-check-mark {
+                font-size: 1.5rem !important;
+            }
+        }
+
+        /* Enhanced Problem Detailing Section Styles */
+        .problem-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(106, 0, 244, 0.08));
+            animation: problemFloat 10s ease-in-out infinite;
+        }
+
+        .problem-circle-1 {
+            width: 150px;
+            height: 150px;
+            top: -20%;
+            right: -15%;
+            animation-delay: 0s;
+        }
+
+        .problem-circle-2 {
+            width: 100px;
+            height: 100px;
+            top: 70%;
+            left: -10%;
+            animation-delay: 3s;
+        }
+
+        .problem-circle-3 {
+            width: 80px;
+            height: 80px;
+            bottom: 10%;
+            right: 20%;
+            animation-delay: 6s;
+        }
+
+        @keyframes problemFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(-25px) scale(1.1);
+            }
+        }
+
+        .problem-title {
+            background: linear-gradient(135deg, #ffffff, #f0f0f0, #ffffff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: problemTitleGlow 3s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes problemTitleGlow {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8));
+            }
+        }
+
+        .problem-card {
+            position: relative;
+            background: linear-gradient(145deg, rgba(139, 92, 246, 0.2), rgba(106, 0, 244, 0.12));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            box-shadow:
+                0 8px 32px rgba(106, 0, 244, 0.15),
+                0 1px 3px rgba(106, 0, 244, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            border-radius: 1.25rem;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(106, 0, 244, 0.15));
+            border-radius: 1.25rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .problem-card:hover::before {
+            opacity: 1;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-8px) rotateX(5deg) scale(1.02);
+            box-shadow:
+                0 20px 40px rgba(106, 0, 244, 0.25),
+                0 8px 25px rgba(106, 0, 244, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+
+        .problem-card:active {
+            transform: translateY(-4px) rotateX(2deg) scale(0.98);
+            transition: transform 0.1s ease;
+        }
+
+        /* Problem Card Ripple Effect */
+        .problem-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(139, 92, 246, 0.4);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .problem-ripple.animate {
+            animation: problemRippleAnimation 0.6s ease-out;
+        }
+
+        @keyframes problemRippleAnimation {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                width: 250px;
+                height: 250px;
+                opacity: 0;
+            }
+        }
+
+        .problem-image-container {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2;
+            filter: drop-shadow(0 4px 12px rgba(106, 0, 244, 0.3));
+        }
+
+        .problem-card:hover .problem-image-container {
+            transform: rotate(-8deg) scale(1.15);
+            filter: drop-shadow(0 8px 20px rgba(106, 0, 244, 0.4));
+        }
+
+        .problem-image {
+            transition: all 0.3s ease;
+            border: 2px solid rgba(139, 92, 246, 0.4);
+            border-radius: 0.75rem;
+        }
+
+        .problem-card:hover .problem-image {
+            border-color: rgba(139, 92, 246, 0.7);
+        }
+
+        .problem-text {
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 8px rgba(106, 0, 244, 0.3);
+        }
+
+        .problem-card:hover .problem-text {
+            transform: translateY(-2px);
+            text-shadow: 0 4px 12px rgba(106, 0, 244, 0.4);
+            color: rgba(255, 255, 255, 0.98);
+        }
+
+        .problem-gradient-overlay {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #6A00F4, #8B5CF6, #A855F7, #C084FC);
+            border-radius: 1.35rem;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 0.3s ease;
+            animation: problemBorderGlow 4s linear infinite;
+        }
+
+        .problem-card:hover .problem-gradient-overlay {
+            opacity: 1;
+        }
+
+        @keyframes problemBorderGlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .problem-card.clicked {
+            animation: problemCardClick 0.3s ease;
+        }
+
+        @keyframes problemCardClick {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.95);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .problem-card:nth-child(odd) {
+            animation: problemFloatOdd 7s ease-in-out infinite;
+        }
+
+        .problem-card:nth-child(even) {
+            animation: problemFloatEven 7s ease-in-out infinite 2s;
+        }
+
+        @keyframes problemFloatOdd {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        @keyframes problemFloatEven {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .problem-card:hover {
+            animation: none;
+        }
+
+        .problem-warning {
+            position: relative;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(106, 0, 244, 0.15));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            transition: all 0.3s ease;
+            animation: warningPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes warningPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(106, 0, 244, 0.6);
+            }
+        }
+
+        .problem-warning:hover {
+            transform: scale(1.02);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), rgba(106, 0, 244, 0.25));
+            border-color: rgba(139, 92, 246, 0.6);
+        }
+
+        /* Mobile Responsiveness for Problem Section */
+        @media (max-width: 450px) {
+            .problem-card {
+                padding: 1.5rem !important;
+                border-radius: 1.25rem;
+                margin-bottom: 1rem;
+            }
+
+            .problem-image-container img {
+                width: 8rem !important;
+                height: 8rem !important;
+            }
+
+            .problem-text {
+                font-size: 1.75rem !important;
+                line-height: 1.3;
+            }
+
+            .problem-title {
+                font-size: 3rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .problem-card:hover {
+                transform: translateY(-6px) scale(1.02);
+            }
+
+            .problem-warning {
+                padding: 1.5rem !important;
+                font-size: 1.5rem !important;
+                margin-top: 2rem !important;
+            }
+        }
+
+        /* Enhanced Deep Problem Section Styles */
+        .deep-problem-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .deep-bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(45, 10, 75, 0.15), rgba(244, 235, 224, 0.08));
+            animation: deepFloat 12s ease-in-out infinite;
+        }
+
+        .deep-circle-1 {
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            left: -8%;
+            animation-delay: 0s;
+        }
+
+        .deep-circle-2 {
+            width: 80px;
+            height: 80px;
+            top: 65%;
+            right: -12%;
+            animation-delay: 4s;
+        }
+
+        .deep-circle-3 {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 8s;
+        }
+
+        @keyframes deepFloat {
+            0%,
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.05);
+            }
+        }
+
+        .deep-title {
+            background: linear-gradient(135deg, #2D0A4B, #6A00F4, #8B5CF6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: deepTitleGlow 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes deepTitleGlow {
+            0%,
+            100% {
+                filter: drop-shadow(0 0 8px rgba(45, 10, 75, 0.4));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 20px rgba(106, 0, 244, 0.6));
+            }
+        }
+
+        .deep-quote {
+            position: relative;
+            background: linear-gradient(135deg, rgba(45, 10, 75, 0.12), rgba(45, 10, 75, 0.08));
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(45, 10, 75, 0.2);
+            border-radius: 1rem;
+            padding: 1rem;
+            animation: quoteFloat 4s ease-in-out infinite;
+            box-shadow: 0 4px 15px rgba(45, 10, 75, 0.1);
+        }
+
+        @keyframes quoteFloat {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        .deep-card {
+            position: relative;
+            background: linear-gradient(145deg, rgba(244, 235, 224, 0.95), rgba(244, 235, 224, 0.85));
+            border: 2px solid rgba(45, 10, 75, 0.15);
+            box-shadow:
+                0 8px 32px rgba(45, 10, 75, 0.12),
+                0 2px 8px rgba(45, 10, 75, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            border-radius: 1.25rem;
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            cursor: pointer;
+        }
+
+        .deep-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(106, 0, 244, 0.08), rgba(139, 92, 246, 0.05));
+            border-radius: 1.25rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .deep-card:hover::before {
+            opacity: 1;
+        }
+
+        .deep-card:hover {
+            transform: translateY(-10px) rotateX(3deg) scale(1.03);
+            box-shadow:
+                0 25px 50px rgba(45, 10, 75, 0.2),
+                0 10px 30px rgba(45, 10, 75, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            border-color: rgba(106, 0, 244, 0.3);
+        }
+
+        .deep-card:active {
+            transform: translateY(-5px) rotateX(1deg) scale(0.98);
+            transition: transform 0.1s ease;
+        }
+
+        /* Deep Card Ripple Effect */
+        .deep-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(106, 0, 244, 0.3);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .deep-ripple.animate {
+            animation: deepRippleAnimation 0.7s ease-out;
+        }
+
+        @keyframes deepRippleAnimation {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+
+        .deep-image-container {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2;
+            filter: drop-shadow(0 4px 12px rgba(45, 10, 75, 0.3));
+        }
+
+        .deep-card:hover .deep-image-container {
+            transform: rotate(8deg) scale(1.2);
+            filter: drop-shadow(0 8px 20px rgba(45, 10, 75, 0.4));
+        }
+
+        .deep-image {
+            transition: all 0.3s ease;
+            border: 2px solid rgba(45, 10, 75, 0.2);
+            border-radius: 0.75rem;
+            background: linear-gradient(135deg, rgba(244, 235, 224, 0.8), rgba(255, 255, 255, 0.9));
+            padding: 0.25rem;
+        }
+
+        .deep-card:hover .deep-image {
+            border-color: rgba(106, 0, 244, 0.4);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(244, 235, 224, 0.9));
+        }
+
+        .deep-text {
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+            text-shadow: 0 1px 3px rgba(45, 10, 75, 0.2);
+        }
+
+        .deep-card:hover .deep-text {
+            transform: translateY(-3px);
+            text-shadow: 0 3px 8px rgba(45, 10, 75, 0.3);
+            color: #1a0829;
+            font-weight: 600;
+        }
+
+        .deep-gradient-overlay {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #2D0A4B, #6A00F4, #8B5CF6, #A855F7);
+            border-radius: 1.35rem;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 0.3s ease;
+            animation: deepBorderGlow 5s linear infinite;
+        }
+
+        .deep-card:hover .deep-gradient-overlay {
+            opacity: 1;
+        }
+
+        @keyframes deepBorderGlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .deep-card.clicked {
+            animation: deepCardClick 0.3s ease;
+        }
+
+        @keyframes deepCardClick {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.95);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Floating animations for deep cards */
+        .deep-card:nth-child(1) {
+            animation: deepCardFloat1 8s ease-in-out infinite;
+        }
+
+        .deep-card:nth-child(2) {
+            animation: deepCardFloat2 8s ease-in-out infinite 2s;
+        }
+
+        .deep-card:nth-child(3) {
+            animation: deepCardFloat3 8s ease-in-out infinite 4s;
+        }
+
+        @keyframes deepCardFloat1 {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes deepCardFloat2 {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+
+        @keyframes deepCardFloat3 {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .deep-card:hover {
+            animation: none;
+        }
+
+        /* Mobile Responsiveness for Deep Problem Section */
+        @media (max-width: 450px) {
+            .deep-card {
+                padding: 1.5rem !important;
+                border-radius: 1.25rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .deep-image-container img {
+                width: 6rem !important;
+                height: 6rem !important;
+            }
+
+            .deep-text {
+                font-size: 1.25rem !important;
+                line-height: 1.4;
+            }
+
+            .deep-title {
+                font-size: 2rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .deep-quote {
+                font-size: 1rem !important;
+                padding: 1.25rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .deep-card:hover {
+                transform: translateY(-6px) scale(1.02);
+            }
+        }
+
+        /* Enhanced Deep Problem Section Styles */
+        .deep-problem-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .deep-bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(45, 10, 75, 0.15), rgba(244, 235, 224, 0.08));
+            animation: deepFloat 12s ease-in-out infinite;
+        }
+
+        .deep-circle-1 {
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            left: -8%;
+            animation-delay: 0s;
+        }
+
+        .deep-circle-2 {
+            width: 80px;
+            height: 80px;
+            top: 65%;
+            right: -12%;
+            animation-delay: 4s;
+        }
+
+        .deep-circle-3 {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 8s;
+        }
+
+        @keyframes deepFloat {
+            0%,
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.05);
+            }
+        }
+
+        .deep-title {
+            background: linear-gradient(135deg, #2D0A4B, #6A00F4, #8B5CF6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: deepTitleGlow 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes deepTitleGlow {
+            0%,
+            100% {
+                filter: drop-shadow(0 0 8px rgba(45, 10, 75, 0.4));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 20px rgba(106, 0, 244, 0.6));
+            }
+        }
+
+        .deep-quote {
+            position: relative;
+            background: linear-gradient(135deg, rgba(45, 10, 75, 0.12), rgba(45, 10, 75, 0.08));
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(45, 10, 75, 0.2);
+            border-radius: 1rem;
+            padding: 1rem;
+            animation: quoteFloat 4s ease-in-out infinite;
+            box-shadow: 0 4px 15px rgba(45, 10, 75, 0.1);
+        }
+
+        @keyframes quoteFloat {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        .deep-card {
+            position: relative;
+            background: linear-gradient(145deg, rgba(244, 235, 224, 0.95), rgba(244, 235, 224, 0.85));
+            border: 2px solid rgba(45, 10, 75, 0.15);
+            box-shadow:
+                0 8px 32px rgba(45, 10, 75, 0.12),
+                0 2px 8px rgba(45, 10, 75, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            border-radius: 1.25rem;
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            cursor: pointer;
+        }
+
+        .deep-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(106, 0, 244, 0.08), rgba(139, 92, 246, 0.05));
+            border-radius: 1.25rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .deep-card:hover::before {
+            opacity: 1;
+        }
+
+        .deep-card:hover {
+            transform: translateY(-10px) rotateX(3deg) scale(1.03);
+            box-shadow:
+                0 25px 50px rgba(45, 10, 75, 0.2),
+                0 10px 30px rgba(45, 10, 75, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            border-color: rgba(106, 0, 244, 0.3);
+        }
+
+        .deep-card:active {
+            transform: translateY(-5px) rotateX(1deg) scale(0.98);
+            transition: transform 0.1s ease;
+        }
+
+        /* Deep Card Ripple Effect */
+        .deep-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(106, 0, 244, 0.3);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .deep-ripple.animate {
+            animation: deepRippleAnimation 0.7s ease-out;
+        }
+
+        @keyframes deepRippleAnimation {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+
+        .deep-image-container {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2;
+            filter: drop-shadow(0 4px 12px rgba(45, 10, 75, 0.3));
+        }
+
+        .deep-card:hover .deep-image-container {
+            transform: rotate(8deg) scale(1.2);
+            filter: drop-shadow(0 8px 20px rgba(45, 10, 75, 0.4));
+        }
+
+        .deep-image {
+            transition: all 0.3s ease;
+            border: 2px solid rgba(45, 10, 75, 0.2);
+            border-radius: 0.75rem;
+            background: linear-gradient(135deg, rgba(244, 235, 224, 0.8), rgba(255, 255, 255, 0.9));
+            padding: 0.25rem;
+        }
+
+        .deep-card:hover .deep-image {
+            border-color: rgba(106, 0, 244, 0.4);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(244, 235, 224, 0.9));
+        }
+
+        .deep-text {
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+            text-shadow: 0 1px 3px rgba(45, 10, 75, 0.2);
+        }
+
+        .deep-card:hover .deep-text {
+            transform: translateY(-3px);
+            text-shadow: 0 3px 8px rgba(45, 10, 75, 0.3);
+            color: #1a0829;
+            font-weight: 600;
+        }
+
+        .deep-gradient-overlay {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #2D0A4B, #6A00F4, #8B5CF6, #A855F7);
+            border-radius: 1.35rem;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 0.3s ease;
+            animation: deepBorderGlow 5s linear infinite;
+        }
+
+        .deep-card:hover .deep-gradient-overlay {
+            opacity: 1;
+        }
+
+        @keyframes deepBorderGlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .deep-card.clicked {
+            animation: deepCardClick 0.3s ease;
+        }
+
+        @keyframes deepCardClick {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.95);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Floating animations for deep cards */
+        .deep-card:nth-child(1) {
+            animation: deepCardFloat1 8s ease-in-out infinite;
+        }
+
+        .deep-card:nth-child(2) {
+            animation: deepCardFloat2 8s ease-in-out infinite 2s;
+        }
+
+        .deep-card:nth-child(3) {
+            animation: deepCardFloat3 8s ease-in-out infinite 4s;
+        }
+
+        @keyframes deepCardFloat1 {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes deepCardFloat2 {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+
+        @keyframes deepCardFloat3 {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .deep-card:hover {
+            animation: none;
+        }
+
+        /* Mobile Responsiveness for Deep Problem Section */
+        @media (max-width: 450px) {
+            .deep-card {
+                padding: 1.5rem !important;
+                border-radius: 1.25rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .deep-image-container img {
+                width: 6rem !important;
+                height: 6rem !important;
+            }
+
+            .deep-text {
+                font-size: 1.25rem !important;
+                line-height: 1.4;
+            }
+
+            .deep-title {
+                font-size: 2rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .deep-quote {
+                font-size: 1rem !important;
+                padding: 1.25rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .deep-card:hover {
+                transform: translateY(-6px) scale(1.02);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-inknut leading-relaxed text-brand-accent transition-all duration-500"
+    style="background: linear-gradient(135deg, var(--support-bg) 0%, var(--brand-light) 50%, var(--brand-muted) 100%); min-height: 100vh;">
+    <div class="w-full main-container">
+        <!-- Header -->
+        <header class="text-white w-full max-w-[450px] mx-auto overflow-hidden "
+            style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary)); border-bottom: 3px solid rgba(255,255,255,0.25); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
+            <div class="flex items-center justify-between gap-4 p-4 max-[450px]:items-center max-[450px]:gap-3">
+                <!-- Brand Row -->
+                <div class="flex items-center justify-center gap-3 flex-1">
+                    <div
+                        class="creative-logo w-12 h-12 max-[450px]:w-10 max-[450px]:h-10 rounded-full flex items-center justify-center border-2 border-white border-opacity-30 overflow-visible">
+                        <!-- Central Healing Symbol -->
+                        <div class="divider-symbol w-12 h-12 max-[450px]:w-10 max-[450px]:h-10">
+                            <span class="text-white text-lg max-[450px]:text-base filter drop-shadow-sm">🌿</span>
+                            <div class="divider-ripple"></div>
+                            <div class="divider-ripple"></div>
+                            <div class="divider-ripple"></div>
+                        </div>
+                        <div class="healing-glow">
+                            <div class="glow-ring"></div>
+                            <div class="glow-ring"></div>
+                            <div class="glow-ring"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="font-arya font-bold text-white drop-shadow-lg text-center leading-tight transition-transform duration-300 text-2xl max-[450px]:text-xl">
+                        <div class="flex items-center justify-center gap-1 hover:scale-105">
+                            <span class="whitespace-nowrap">Vitiligo</span>
+                            <span class="whitespace-nowrap">Care</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- CTA Button -->
+                <div class="flex-1 flex justify-center max-[450px]:justify-end">
+                    <button
+                        class="text-white font-bold border-none px-5 py-3 rounded-lg text-base max-[450px]:w-full cursor-pointer transition-all duration-300 hover:scale-105"
+                        onclick="scrollToContact()"
+                        style="background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary)); border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                        <span class="relative z-10">🛒 ऑर्डर करें</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main style="background: transparent;">
+
+
+            <!-- Problem Detailing Section -->
+            <section class="problem-section p-4 text-white relative"
+                style="background:var(--brand-secondary); clip-path: polygon(0 0, 100% 0, 100% 88%, 75% 100%, 25% 95%, 0 100%);">
+                <!-- Floating Background Circles -->
+                <div class="problem-bg-circle problem-circle-1"></div>
+                <div class="problem-bg-circle problem-circle-2"></div>
+                <div class="problem-bg-circle problem-circle-3"></div>
+
+                <div class="max-w-md mx-auto relative z-10">
+                    <h2 class="problem-title text-2xl font-bold mb-8 text-center">Problem Detailing</h2>
+
+                    <div class="space-y-4">
+
+                        <!-- Problem Point 1 -->
+                        <div class="problem-card flex gap-4 items-center cursor-pointer"
+                            onclick="animateProblemCard(this, 'तेज़ खुजली')">
+                            <div class="problem-ripple"></div>
+                            <div class="problem-gradient-overlay"></div>
+                            <div class="problem-image-container">
+                                <img src="./Image/Pro1.png" class="problem-image w-20 h-20 object-cover"
+                                    style="clip-path: polygon(0 0, 100% 0, 85% 100%, 0 85%);" />
+                            </div>
+                            <p class="problem-text text-sm font-medium">शरीर की त्वचा में तेज़ खुजली</p>
+                        </div>
+
+                        <!-- Problem Point 2 -->
+                        <div class="problem-card flex gap-4 items-center cursor-pointer"
+                            onclick="animateProblemCard(this, 'जलन और लालपन')">
+                            <div class="problem-ripple"></div>
+                            <div class="problem-gradient-overlay"></div>
+                            <div class="problem-image-container">
+                                <img src="./Image/Pro2.png" class="problem-image w-20 h-20 object-cover"
+                                    style="clip-path: polygon(0 0, 100% 0, 85% 100%, 0 85%);" />
+                            </div>
+                            <p class="problem-text text-sm font-medium">जलन और लालपन दिन-ब-दिन बढ़ना</p>
+                        </div>
+
+                        <!-- Problem Point 3 -->
+                        <div class="problem-card flex gap-4 items-center cursor-pointer"
+                            onclick="animateProblemCard(this, 'दाद का फैलना')">
+                            <div class="problem-ripple"></div>
+                            <div class="problem-gradient-overlay"></div>
+                            <div class="problem-image-container">
+                                <img src="./Image/Pro3.png" class="problem-image w-20 h-20 object-cover"
+                                    style="clip-path: polygon(0 0, 100% 0, 85% 100%, 0 85%);" />
+                            </div>
+                            <p class="problem-text text-sm font-medium">दाद का शरीर पर फैलना</p>
+                        </div>
+
+                        <!-- Problem Point 4 -->
+                        <div class="problem-card flex gap-4 items-center cursor-pointer"
+                            onclick="animateProblemCard(this, 'स्किन पर पपड़ी')">
+                            <div class="problem-ripple"></div>
+                            <div class="problem-gradient-overlay"></div>
+                            <div class="problem-image-container">
+                                <img src="./Image/Pro4.png" class="problem-image w-20 h-20 object-cover"
+                                    style="clip-path: polygon(0 0, 100% 0, 85% 100%, 0 85%);" />
+                            </div>
+                            <p class="problem-text text-sm font-medium">स्किन पर पपड़ी जमना और बार-बार फटना</p>
+                        </div>
+
+                        <!-- Problem Point 5 -->
+                        <div class="problem-card flex gap-4 items-center cursor-pointer"
+                            onclick="animateProblemCard(this, 'दर्दनाक क्रैक्स')">
+                            <div class="problem-ripple"></div>
+                            <div class="problem-gradient-overlay"></div>
+                            <div class="problem-image-container">
+                                <img src="./Image/Pro5.png" class="problem-image w-20 h-20 object-cover"
+                                    style="clip-path: polygon(0 0, 100% 0, 85% 100%, 0 85%);" />
+                            </div>
+                            <p class="problem-text text-sm font-medium">हाथ-पैर या मुंह पर दर्दनाक क्रैक्स</p>
+                        </div>
+
+                    </div>
+
+                    <div class="problem-warning mt-4 mb-6 text-lg font-semibold p-6 rounded-xl">
+                        👉 ये सिर्फ़ स्किन प्रॉब्लम नहीं, बल्कि गंभीर फंगल इन्फेक्शन का संकेत है।
+                    </div>
+                </div>
+            </section>
+            <!-- Enhanced Healing Divider -->
+            <div class="my-4 flex items-center justify-center max-[450px]:my-2">
+                <div class="healing-divider w-full max-w-md relative">
+                    <!-- Main Divider Line -->
+                    <div class="divider-line w-full">
+                        <div class="divider-flow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Problem Section -->
+            <section class="deep-problem-section p-4  bg-[#F4EBE0] text-[#2D0A4B] relative"
+                style="clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);">
+                
+                <!-- Floating Background Circles -->
+                <div class="deep-bg-circle deep-circle-1"></div>
+                <div class="deep-bg-circle deep-circle-2"></div>
+                <div class="deep-bg-circle deep-circle-3"></div>
+
+                <div class="max-w-md mx-auto relative z-10">
+                    <h2 class="deep-title text-3xl font-bold mb-6 text-center"> Deep Problem Section</h2>
+
+                    <p class="text-sm mb-4 center italic">
+                        “थोड़ी खुजली है, क्रीम लगा लेंगे…”
+                    </p>
+
+                    <div class="space-y-6">
+
+                        <!-- Deep Point 1 -->
+                        <div class="deep-card" onclick="animateDeepCard(this)">
+                            <div class="deep-card-border"></div>
+                            <div class="flex items-center gap-4">
+                                <div class="deep-card-icon flex items-center justify-center">
+                                    <img src="./Image/Deep1.png" class="w- h-8 object-contain filter brightness-0 invert" />
+                                </div>
+                                <div class="deep-card-text flex-1">
+                                    फंगल इन्फेक्शन अंदर तक जड़ जमा लेता है
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Deep Point 2 -->
+                        <div class="deep-card" onclick="animateDeepCard(this)">
+                            <div class="deep-card-border"></div>
+                            <div class="flex items-center gap-4">
+                                <div class="deep-card-icon flex items-center justify-center">
+                                    <img src="./Image/Deep2.png" class="w-8 h-8 object-contain filter brightness-0 invert" />
+                                </div>
+                                <div class="deep-card-text flex-1">
+                                    केमिकल क्रीम कुछ दिन दबाती हैं, जड़ से खत्म नहीं करती
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Deep Point 3 -->
+                        <div class="deep-card" onclick="animateDeepCard(this)">
+                            <div class="deep-card-border"></div>
+                            <div class="flex items-center gap-4">
+                                <div class="deep-card-icon flex items-center justify-center">
+                                    <img src="./Image/Deep3.png" class="w-8 h-8 object-contain filter brightness-0 invert" />
+                                </div>
+                                <div class="deep-card-text flex-1">
+                                    थोड़ी-सी लापरवाही से पूरे शरीर में फैल सकता है
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- Enhanced Healing Divider -->
+            <div class="my-4 flex items-center justify-center max-[450px]:my-2">
+                <div class="healing-divider w-full max-w-md relative">
+                    <!-- Main Divider Line -->
+                    <div class="divider-line w-full">
+                        <div class="divider-flow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="py-10 px-4 bg-[#F4EBE0]">
+                <div class="max-w-xs mx-auto">
+
+                    <!-- Heading -->
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-bold mt-3 text-[#2D0A4B]">
+                            ⚙️ कैसे काम करता है Dermotex Combo?
+                        </h2>
+                    </div>
+
+                    <!-- Combo Cards -->
+                    <div class="space-y-6">
+
+                        <!-- Dermotex Cream -->
+                        <div class="bg-white rounded-2xl shadow-md p-5 border">
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="./Image/1.png" class="w-30 h-30"
+                                    alt="Cream">
+                                <h3 class="text-lg font-bold text-[#3B1F5E]">
+                                    Dermotex Cream
+                                </h3>
+                            </div>
+
+                            <ul class="space-y-3 text-sm text-[#2D0A4B]">
+                                <li class="flex gap-2 items-start">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/10221/10221361.png" class="w-12 h-12"
+                                        alt="Target fungus">
+                                    <span>फंगल जड़ों पर सीधा असर करता है</span>
+                                </li>
+
+                                <li class="flex gap-2 items-start">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/4223/4223545.png" class="w-12 h-12"
+                                        alt="Relief">
+                                    <span>खुजली, जलन और लालपन को शांत करता है</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Dermotex Powder -->
+                        <div class="bg-white rounded-2xl shadow-md p-5 border">
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="./Image/2.png" class="w-30 h-30"
+                                    alt="Powder">
+                                <h3 class="text-lg font-bold text-[#3B1F5E]">
+                                    Dermotex Powder
+                                </h3>
+                            </div>
+
+                            <ul class="space-y-3 text-sm text-[#2D0A4B]">
+                                <li class="flex gap-2 items-start">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/3782/3782106.png" class="w-12 h-12"
+                                        alt="Moisture control">
+                                    <span>पसीना और नमी को कंट्रोल करता है</span>
+                                </li>
+
+                                <li class="flex gap-2 items-start">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/16105/16105328.png" class="w-12 h-12"
+                                        alt="Protection">
+                                    <span>दोबारा इन्फेक्शन होने से बचाता है</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Result Strip -->
+                        <div class="bg-[#EDE7F6] border border-[#B39DDB] rounded-2xl p-4 text-center shadow-sm">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4315/4315445.png"
+                                class="w-8 h-8 mx-auto mb-2" alt="Long lasting result">
+
+                            <p class="text-sm font-semibold text-[#3B1F5E]">
+                                👉 यही वजह है कि <br>
+                                <span class="font-bold">रिज़ल्ट टिकाऊ होते हैं</span>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- Enhanced Healing Divider -->
+            <div class="my-4 flex items-center justify-center max-[450px]:my-2">
+                <div class="healing-divider w-full max-w-md relative">
+                    <!-- Main Divider Line -->
+                    <div class="divider-line w-full">
+                        <div class="divider-flow"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Enhanced Healing Divider -->
+            <div class="my-4 flex items-center justify-center max-[450px]:my-2">
+                <div class="healing-divider w-full max-w-md relative">
+                    <!-- Main Divider Line -->
+                    <div class="divider-line w-full">
+                        <div class="divider-flow"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Section -->
+            <section
+                class="px-4 py-4 bg-brand-primary text-white border-b-2 border-brand-light max-[450px]:py-6 max-[450px]:px-3"
+                id="contact">
+
+                <!-- Order Header -->
+                <div class="text-center mb-6 max-[450px]:mb-4">
+                    <h2 class="text-2xl font-bold font-arya mb-3 max-[450px]:text-xl max-[450px]:mb-2">
+                        🛡️ अपनी त्वचा को Dermotex Care से रिंगवर्म धब्बों से बचाइए।
+                    </h2>
+                    <p class="text-lg font-arya font-semibold max-[450px]:text-base mb-2">
+                        ⚡ 7–10 दिनों में असर महसूस करें।
+                    </p>
+                    <div class="mt-4 max-[450px]:mt-3">
+                        <p
+                            class="text-lg font-arya font-bold text-white bg-gradient-to-r from-brand-primary to-brand-secondary px-4 py-2 rounded-lg shadow-lg max-[450px]:text-base max-[450px]:px-3 max-[450px]:py-2 animate-pulse">
+                            👉 अभी ऑर्डर करें और Dermotex Care की सुधार यात्रा आज से शुरू करें
+                        </p>
+                        <p
+                            class="text-xl font-arya font-extrabold text-brand-light mt-2 max-[450px]:text-lg max-[450px]:mt-1 tracking-wide">
+                            🛒 ORDER NOW
+                        </p>
+                    </div>
+                </div>
+
+                <form id="contactForm">
+                    <div class="mb-4 max-[450px]:mb-3">
+                        <label for="name"
+                            class="block mb-2 text-xl text-white font-arya font-semibold max-[450px]:text-lg max-[450px]:mb-1">आपका
+                            नाम:</label>
+                        <input type="text" id="name" name="name" required placeholder="अपना नाम लिखें"
+                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-brand-muted font-arya max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
+                    </div>
+                    <div class="mb-4 max-[450px]:mb-3">
+                        <label for="phone"
+                            class="block mb-2 text-xl text-white font-arya font-semibold max-[450px]:text-lg max-[450px]:mb-1">फोन
+                            नंबर:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="अपना फोन नंबर लिखें"
+                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-brand-muted font-arya max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
+                    </div>
+                    <button type="submit"
+                        class="bg-brand-secondary text-white font-bold border-none py-4 px-8 rounded text-2xl font-arya cursor-pointer w-full mt-4 transition-all duration-300 hover:bg-opacity-90 max-[450px]:py-3 max-[450px]:px-4 max-[450px]:text-xl max-[450px]:mt-3"
+                        onclick="showThankYou()">
+                        <span>✨</span>
+                        अभी ऑर्डर करें
+                        <span>✨</span>
+                    </button>
+                </form>
+            </section>
+            <!-- Enhanced Healing Divider -->
+            <div class="my-4 flex items-center justify-center max-[450px]:my-2">
+                <div class="healing-divider w-full max-w-md relative">
+                    <!-- Main Divider Line -->
+                    <div class="divider-line w-full">
+                        <div class="divider-flow"></div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer
+            class="bg-brand-primary text-white py-4 px-4 text-center max-[450px]:py-4 max-[450px]:px-3 pb-20 max-[450px]:pb-20">
+            <div class="text-sm mt-4 font-arya max-[450px]:text-xs max-[450px]:mt-2"
+                style="color: rgba(256,256,256,0.85)">
+                <p><strong class="font-arya text-white">⚠️ Disclaimer :-</strong>This product is not intended to
+                    diagnose, treat, cure, or prevent any disease. Results may vary from person to person. Always
+                    consult with a qualified healthcare professional before starting any new supplement.</p>
+            </div>
+        </footer>
+        <!-- Thank You Modal -->
+        <div id="thankYouModal" class="hidden fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center"
+            style="background-color:rgba(248,210,200,0.2); border-radius: 15px; padding: 8px 16px; backdrop-filter: blur(10px); border: 2px solid rgba(248,210,200,0.3); box-shadow: 0 8px 25px rgba(0, 0, 0, 0);">
+            <div
+                class="bg-brand-light p-8 rounded-lg text-center max-w-sm mx-4 max-[450px]:p-6 max-[450px]:max-w-xs border-2 border-brand-secondary">
+                <h2 class="text-brand-primary mb-4 text-2xl font-arya font-bold max-[450px]:text-xl max-[450px]:mb-3">
+                    धन्यवाद!</h2>
+                <p class="text-xl mb-6 font-arya font-medium max-[450px]:text-lg max-[450px]:mb-4 text-brand-accent">
+                    हमने
+                    आपकी
+                    जानकारी
+                    प्राप्त कर ली है और आपकी
+                    मुफ्त सलाह निर्धारित करने के लिए 24 घंटे के भीतर आपसे संपर्क करेंगे।</p>
+            </div>
+        </div>
+        <!-- Fixed CTA Form at Bottom -->
+        <div id="fixedCTA"
+            class="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-brand-primary shadow-2xl w-[450px] border-t-4 border-brand-secondary">
+            <div class="px-2 py-3 w-full max-[450px]:px-2 max-w-screen-xl mx-auto">
+                <!-- Main Content: Centered Layout -->
+                <div class="flex flex-col items-center justify-between gap-3 max-[450px]:gap-4">
+                    <!-- Promotional Points -->
+                    <div
+                        class="flex justify-around items-center gap-10 text-white text-sm font-arya font-bold max-[450px]:text-xs max-[450px]:gap-12">
+                        <span class="truncate">🔥 Today Offer</span>
+                        <span class="truncate">📊 Diet Chart</span>
+                        <span class="truncate">💰 Cod Available</span>
+                    </div>
+
+                    <!-- Timer & Button Section -->
+                    <div class="flex items-center justify-between gap-15 max-[450px]:gap-18">
+                        <!-- Countdown Timer -->
+                        <div class="text-center">
+                            <div id="countdown"
+                                class="text-white text-lg max-[450px]:text-base font-extrabold font-arya whitespace-nowrap flex items-center gap-1">
+                                <span class="animate-pulse">⏰</span>
+                                <span>00:00:00</span>
+                            </div>
+                            <p class="text-white text-xs max-[450px]:text-[10px] font-semibold font-arya"
+                                style="opacity: 0.9;">
+                                Offer समाप्त होने में
+                            </p>
+                        </div>
+
+                        <!-- Order Button -->
+                        <button id="ctaButton" onclick="scrollToContact()"
+                            class="text-white px-6 py-2.5 rounded-xl font-arya font-bold text-base transition-all duration-300 shadow-lg hover:scale-105 hover:shadow-xl transform whitespace-nowrap max-[450px]:text-sm max-[450px]:px-4 max-[450px]:py-2"
+                            style="background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary)); border: 2px solid rgba(255, 255, 255, 0.3);">
+                            <span class="flex items-center gap-2">
+                                <span>🛒</span>
+                                <span>Order Now</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function showThankYou() {
+            // Process and fill form data
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            // Validate form data
+            if (!name || !phone) {
+                alert('कृपया सभी फील्ड भरें!');
+                return false;
+            }
+
+            // Process the data (you can modify this part as needed)
+            const formData = {
+                customerName: name,
+                phoneNumber: phone,
+                timestamp: new Date().toLocaleString('hi-IN'),
+                product: 'Vitiligo Care'
+            };
+
+            // Fill/store the processed data (example: console log or local storage)
+            console.log('Form Data Processed:', formData);
+            localStorage.setItem('customerOrder', JSON.stringify(formData));
+
+            // Show thank you modal if it exists, otherwise show alert
+            const modal = document.getElementById('thankYouModal');
+            if (modal) {
+                modal.style.display = 'flex';
+                // Auto close after 3 seconds
+                setTimeout(() => {
+                    closeModal();
+                }, 20000);
+            } else {
+                // Fallback alert with processed data
+                alert(`धन्यवाद ${name}! आपका ऑर्डर सफलतापूर्वक सबमिट हो गया है। हमारी टीम जल्द ही ${phone} पर आपसे संपर्क करेगी।`);
+                document.getElementById('contactForm').reset();
+            }
+
+            return true;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('thankYouModal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            document.getElementById('contactForm').reset();
+        }
+
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Countdown Timer Function
+        function updateCountdown() {
+            const now = new Date();
+            const tomorrow = new Date(now);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0); // Set to midnight
+
+            const timeRemaining = tomorrow - now;
+
+            const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            const formattedTime =
+                String(hours).padStart(2, '0') + ':' +
+                String(minutes).padStart(2, '0') + ':' +
+                String(seconds).padStart(2, '0');
+
+            const countdownElement = document.getElementById('countdown');
+            if (countdownElement) {
+                countdownElement.innerHTML = `<span class="animate-pulse">⏰</span> <span>${formattedTime}</span>`;
+            }
+        }
+        // Start the countdown timer immediately and update every second
+        updateCountdown(); // Initial call
+        setInterval(updateCountdown, 1000); // Update every second
+
+
+
+
+
+        // Enhanced FAQ Functionality
+        function initEnhancedFAQ() {
+            const items = document.querySelectorAll('.faq-enhanced-item');
+            const categories = document.querySelectorAll('.faq-category');
+            const searchInput = document.getElementById('faqSearch');
+
+            // Accordion functionality
+            items.forEach((item, idx) => {
+                const btn = item.querySelector('.faq-enhanced-question');
+                const answer = item.querySelector('.faq-enhanced-answer');
+
+                const toggle = () => {
+                    const isActive = item.classList.contains('active');
+                    // Close all others
+                    items.forEach(i => {
+                        if (i !== item) {
+                            i.classList.remove('active');
+                            const b = i.querySelector('.faq-enhanced-question');
+                            const a = i.querySelector('.faq-enhanced-answer');
+                            if (b) b.setAttribute('aria-expanded', 'false');
+                            if (a) a.setAttribute('aria-hidden', 'true');
+                        }
+                    });
+                    // Toggle current
+                    if (!isActive) {
+                        item.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                        answer.setAttribute('aria-hidden', 'false');
+                    } else {
+                        item.classList.remove('active');
+                        btn.setAttribute('aria-expanded', 'false');
+                        answer.setAttribute('aria-hidden', 'true');
+                    }
+                };
+
+                btn.addEventListener('click', toggle);
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggle();
+                    }
+                    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                        const dir = e.key === 'ArrowDown' ? 1 : -1;
+                        const visibleItems = Array.from(items).filter(item => item.style.display !== 'none');
+                        const currentVisibleIndex = visibleItems.indexOf(item);
+                        const nextIndex = (currentVisibleIndex + dir + visibleItems.length) % visibleItems.length;
+                        visibleItems[nextIndex].querySelector('.faq-enhanced-question').focus();
+                    }
+                });
+            });
+
+            // Category filtering
+            categories.forEach(category => {
+                category.addEventListener('click', () => {
+                    const selectedCategory = category.dataset.category;
+
+                    // Update active category
+                    categories.forEach(c => c.classList.remove('active'));
+                    category.classList.add('active');
+
+                    // Filter items
+                    items.forEach(item => {
+                        const itemCategory = item.dataset.category;
+                        if (selectedCategory === 'all' || itemCategory === selectedCategory) {
+                            item.style.display = 'block';
+                            // Add entrance animation
+                            item.style.animation = 'fadeInUp 0.3s ease';
+                        } else {
+                            item.style.display = 'none';
+                            item.classList.remove('active');
+                        }
+                    });
+
+                    // Clear search when category changes
+                    if (searchInput) searchInput.value = '';
+                });
+            });
+
+            // Search functionality
+            if (searchInput) {
+                let searchTimeout;
+                searchInput.addEventListener('input', (e) => {
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(() => {
+                        const query = e.target.value.toLowerCase().trim();
+
+                        items.forEach(item => {
+                            const title = item.querySelector('.faq-enhanced-title').textContent.toLowerCase();
+                            const content = item.querySelector('.faq-enhanced-answer-content').textContent.toLowerCase();
+
+                            if (query === '' || title.includes(query) || content.includes(query)) {
+                                item.style.display = 'block';
+                                item.style.animation = 'fadeInUp 0.3s ease';
+                            } else {
+                                item.style.display = 'none';
+                                item.classList.remove('active');
+                            }
+                        });
+
+                        // Reset category filter if searching
+                        if (query !== '') {
+                            categories.forEach(c => c.classList.remove('active'));
+                        }
+                    }, 300);
+                });
+            }
+
+            // Add CSS animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        document.addEventListener('DOMContentLoaded', initEnhancedFAQ);
+
+        // Enhanced Card Click Animation
+        function animateCard(card) {
+            // Add ripple effect
+            const ripple = card.querySelector('.card-ripple');
+            const rect = card.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+
+            // Reset ripple
+            ripple.classList.remove('animate');
+            ripple.style.width = '0px';
+            ripple.style.height = '0px';
+
+            // Trigger ripple animation
+            setTimeout(() => {
+                ripple.classList.add('animate');
+            }, 10);
+
+            // Add click animation class
+            card.classList.add('clicked');
+
+            // Remove click animation class after animation completes
+            setTimeout(() => {
+                card.classList.remove('clicked');
+            }, 300);
+
+            // Add a subtle bounce feedback
+            card.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                card.style.transform = '';
+            }, 100);
+
+            // Optional: Add haptic feedback for mobile devices
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+
+            // Play a subtle sound effect (optional - you can add an audio element)
+            // const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmgfCCuBzvLZiTYIHGa...'); audio.play();
+        }
+
+        // Enhanced Trust Card Click Animation
+        function animateTrustCard(card, certification) {
+            // Add ripple effect
+            const ripple = card.querySelector('.trust-ripple');
+
+            // Reset ripple
+            ripple.classList.remove('animate');
+            ripple.style.width = '0px';
+            ripple.style.height = '0px';
+
+            // Trigger ripple animation
+            setTimeout(() => {
+                ripple.classList.add('animate');
+            }, 10);
+
+            // Add click animation class
+            card.classList.add('clicked');
+
+            // Remove click animation class after animation completes
+            setTimeout(() => {
+                card.classList.remove('clicked');
+            }, 300);
+
+            // Add a subtle bounce feedback
+            card.style.transform = 'scale(0.96)';
+            setTimeout(() => {
+                card.style.transform = '';
+            }, 100);
+
+            // Add haptic feedback for mobile devices
+            if (navigator.vibrate) {
+                navigator.vibrate([50, 50, 50]);
+            }
+
+            // Visual feedback - temporary glow effect
+            card.style.boxShadow = '0 0 30px rgba(106, 0, 244, 0.5), 0 25px 50px rgba(0, 0, 0, 0.15)';
+            setTimeout(() => {
+                card.style.boxShadow = '';
+            }, 500);
+
+            // Show certification info (optional enhancement)
+            console.log(`${certification} Certification verified! ✅`);
+
+            // Optional: Show toast notification
+            // showTrustToast(`${certification} certification verified!`);
+        }
+
+        // Optional: Function to show toast notifications
+        function showTrustToast(message) {
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+            toast.textContent = message;
+
+            // Add to DOM
+            document.body.appendChild(toast);
+
+            // Show toast
+            setTimeout(() => {
+                toast.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+                toast.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, 3000);
+        }
+
+        // Enhanced Problem Card Click Animation
+        function animateProblemCard(card, problemType) {
+            // Add ripple effect
+            const ripple = card.querySelector('.problem-ripple');
+
+            // Reset ripple
+            ripple.classList.remove('animate');
+            ripple.style.width = '0px';
+            ripple.style.height = '0px';
+
+            // Trigger ripple animation
+            setTimeout(() => {
+                ripple.classList.add('animate');
+            }, 10);
+
+            // Add click animation class
+            card.classList.add('clicked');
+
+            // Remove click animation class after animation completes
+            setTimeout(() => {
+                card.classList.remove('clicked');
+            }, 300);
+
+            // Add a subtle bounce feedback
+            card.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                card.style.transform = '';
+            }, 150);
+
+            // Add haptic feedback for mobile devices
+            if (navigator.vibrate) {
+                navigator.vibrate([30, 30, 30]);
+            }
+
+            // Visual feedback - temporary enhanced glow effect
+            card.style.boxShadow = '0 0 40px rgba(139, 92, 246, 0.7), 0 20px 40px rgba(106, 0, 244, 0.4)';
+            setTimeout(() => {
+                card.style.boxShadow = '';
+            }, 600);
+
+            // Enhanced visual feedback - pulse effect on image
+            const imageContainer = card.querySelector('.problem-image-container');
+            imageContainer.style.transform = 'rotate(-8deg) scale(1.2)';
+            setTimeout(() => {
+                imageContainer.style.transform = '';
+            }, 400);
+
+            // Optional: Show problem acknowledgment
+            console.log(`Problem identified: ${problemType} 🚨`);
+
+            // Optional: Add problem awareness toast
+            showProblemToast(`${problemType} की पहचान की गई!`);
+        }
+
+        // Function to show problem awareness toast
+        function showProblemToast(message) {
+            // Create toast element with problem-specific styling
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-4 left-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform -translate-x-full transition-transform duration-300';
+            toast.innerHTML = `<span class="font-bold">⚠️ ${message}</span>`;
+
+            // Add to DOM
+            document.body.appendChild(toast);
+
+            // Show toast
+            setTimeout(() => {
+                toast.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Hide toast after 2.5 seconds
+            setTimeout(() => {
+                toast.style.transform = 'translateX(-100%)';
+                setTimeout(() => {
+                    if (document.body.contains(toast)) {
+                        document.body.removeChild(toast);
+                    }
+                }, 300);
+            }, 2500);
+        }
+
+        // Enhanced Deep Card Click Animation
+        function animateDeepCard(card, deepProblem) {
+            // Add ripple effect
+            const ripple = card.querySelector('.deep-ripple');
+
+            // Reset ripple
+            ripple.classList.remove('animate');
+            ripple.style.width = '0px';
+            ripple.style.height = '0px';
+
+            // Trigger ripple animation
+            setTimeout(() => {
+                ripple.classList.add('animate');
+            }, 10);
+
+            // Add click animation class
+            card.classList.add('clicked');
+
+            // Remove click animation class after animation completes
+            setTimeout(() => {
+                card.classList.remove('clicked');
+            }, 300);
+
+            // Add a subtle bounce feedback
+            card.style.transform = 'scale(0.96)';
+            setTimeout(() => {
+                card.style.transform = '';
+            }, 150);
+
+            // Add haptic feedback for mobile devices
+            if (navigator.vibrate) {
+                navigator.vibrate([40, 40, 40]);
+            }
+
+            // Visual feedback - temporary enhanced glow effect
+            card.style.boxShadow = '0 0 35px rgba(45, 10, 75, 0.4), 0 15px 35px rgba(106, 0, 244, 0.2)';
+            setTimeout(() => {
+                card.style.boxShadow = '';
+            }, 500);
+
+            // Enhanced visual feedback - pulse effect on image
+            const imageContainer = card.querySelector('.deep-image-container');
+            imageContainer.style.transform = 'rotate(8deg) scale(1.25)';
+            setTimeout(() => {
+                imageContainer.style.transform = '';
+            }, 400);
+
+            // Optional: Show deep problem acknowledgment
+            console.log(`Deep Problem identified: ${deepProblem} 🔍`);
+
+            // Optional: Add deep awareness toast
+            showDeepToast(`${deepProblem} की गहरी समस्या पहचानी गई!`);
+        }
+
+        // Function to show deep problem awareness toast
+        function showDeepToast(message) {
+            // Create toast element with deep problem-specific styling
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-4 right-4 bg-orange-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+            toast.innerHTML = `<span class="font-bold">🔍 ${message}</span>`;
+
+            // Add to DOM
+            document.body.appendChild(toast);
+
+            // Show toast
+            setTimeout(() => {
+                toast.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+                toast.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (document.body.contains(toast)) {
+                        document.body.removeChild(toast);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+    </script>
+</body>
+
+</html>
